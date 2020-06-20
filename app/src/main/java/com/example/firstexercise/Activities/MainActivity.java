@@ -23,7 +23,14 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme_Launcher);
+
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         setContentView(R.layout.activity_main);
         FragmentManager manager = getSupportFragmentManager();
@@ -35,7 +42,12 @@ public class MainActivity extends AppCompatActivity
             FragmentTransaction transaction = manager.beginTransaction();
             transaction.add(R.id.fragment_container, fragment, "0").commit();
         }
+    }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        this.finish();
     }
 
     /**
