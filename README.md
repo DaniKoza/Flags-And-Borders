@@ -8,3 +8,4 @@ Things i've done:
 - Decoding and converting SVG into ImageView
 - Custom RecyclerView touch listener
 - Search filter inside of Recycler's adapter
+- Splash screen using theme launcher.
