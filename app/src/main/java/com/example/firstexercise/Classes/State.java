@@ -11,13 +11,12 @@ public class State implements Serializable {
     private String nativeName;
     private String flag;
 
-    public State (String name , String nativeName)
-    {
+    public State(String name, String nativeName) {
         this.name = name;
         this.nativeName = nativeName;
     }
 
-    public State(String name, ArrayList<String> borders, String nativeName , String flag) {
+    public State(String name, ArrayList<String> borders, String nativeName, String flag) {
         this.name = name;
         this.borders = borders;
         this.nativeName = nativeName;

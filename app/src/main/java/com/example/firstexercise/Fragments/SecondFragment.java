@@ -96,9 +96,9 @@ public class SecondFragment extends Fragment {
         Intent i = getActivity().getIntent();
         State passedState = (State) i.getSerializableExtra("StateObj");
 
-        // If no borders there's no use to do all the other code below.
+        // Another check to make sure there are any borders.
         if (passedState.getBorders().isEmpty()) {
-            Toast.makeText(getActivity(), "Sorry No Borders", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "No Borders", Toast.LENGTH_LONG).show();
             return view;
         }
 

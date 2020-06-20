@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.firstexercise.Activities.MainActivity;
 import com.example.firstexercise.Adapters.StateAdapter;
@@ -68,8 +69,14 @@ public class FirstFragment extends Fragment {
                         Animation hyperspaceJumpAnimation = AnimationUtils.loadAnimation(getActivity(), R.anim.shake);
                         view.startAnimation(hyperspaceJumpAnimation);
                         State s = stateAdapter.getMyStates().get(position);
-                        MainActivity ma = (MainActivity) getActivity();
-                        ma.LoadSecFragment(s);
+
+                        if (s.getBorders().isEmpty()) {
+                            // If no borders there's no use to move to second fragment.
+                            Toast.makeText(getActivity(), "Islands have no borders", Toast.LENGTH_LONG).show();
+                        } else {
+                            MainActivity ma = (MainActivity) getActivity();
+                            ma.LoadSecFragment(s);
+                        }
                     }
 
                     @Override
@@ -81,7 +88,6 @@ public class FirstFragment extends Fragment {
 
 
         inputSearch.addTextChangedListener(new TextWatcher() {
-
             @Override
             public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
                 // When user changes the Text
