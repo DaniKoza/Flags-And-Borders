@@ -1,4 +1,4 @@
- <a href="http://fvcproductions.com"><img src="https://www.worldflagshop.com/wp-content/uploads/2018/10/195-flag.png" title="Flags" width="200" length="400"></a> 
+ <a><img src="https://www.worldflagshop.com/wp-content/uploads/2018/10/195-flag.png" title="Flags" width="200" length="400"></a> 
  # Flags-And-Borders
 Simple app that shows a list of all flags exist. You can search for a country and touch a flag to see its borders. 
 
@@ -12,3 +12,6 @@ Things i've done:
 - Splash screen using theme launcher.
 
 # Inside samples
+ <a><img src="https://i.ibb.co/xjy3tPR/Screenshot-20200729-174536-First-Exercise.jpg" title="Flags" width="300" length="500"></a> 
+ 
+ <a><img src="https://i.ibb.co/CBvxdxb/Screenshot-20200729-174629-First-Exercise.jpg" title="Flags" width="300" length="500"></a> 
